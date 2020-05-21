@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 赵建伟的博客
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: zjwlinux
 language: en
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://zjwlinux.github.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -93,9 +93,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+font:
+  headings:
+    size: 2em
