@@ -4,16 +4,16 @@
 
 # Site
 title: 赵建伟的博客
-subtitle: ''
-description: ''
-keywords:
+subtitle: '记录人生点滴'
+description: '用来记录学习和生活中的点点滴滴'
+keywords: java, ABAP
 author: zjwlinux
 language: en
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zjwlinux.github.com
+url: https://zjwlinux.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -58,7 +58,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 5
   order_by: -date
 
 # Category & Tag
@@ -98,8 +98,12 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:zjwlinux/zjwlinux.github.io.git
+  branch: master
 
-font:
-  headings:
-    size: 2em
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

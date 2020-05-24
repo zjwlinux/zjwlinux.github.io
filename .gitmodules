@@ -1,0 +1,4 @@
+
+[submodule "themes/next"]
+	path = themes/next
+	url = git@gitee.com:zhao_jianwei/hexo-theme-next.git
