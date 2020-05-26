@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>GitHub Page</title>
+    <url>/blog/2020/05/21/github-pages/</url>
+    <content><![CDATA[<pre><code>创建 GitHub Page 网站
+使用自有域名访问 GitHub Page</code></pre><a id="more"></a>
+
+<h2 id="创建-GitHub-Page-网站"><a href="#创建-GitHub-Page-网站" class="headerlink" title="创建 GitHub Page 网站"></a>创建 GitHub Page 网站</h2><ol>
+<li><p>注册 GitHub 账号</p>
+</li>
+<li><p>创建与账号同名的 Repository</p>
+<p> 例如账号名称为 zjw，则创建的 Repository 名称为 zjw.github.io<br> 可以使用 <a href="https://zjw.github.io" target="_blank" rel="noopener">https://zjw.github.io</a> 访问网站</p>
+</li>
+</ol>
+<h2 id="使用自有域名访问-GitHub-Page"><a href="#使用自有域名访问-GitHub-Page" class="headerlink" title="使用自有域名访问 GitHub Page"></a>使用自有域名访问 GitHub Page</h2><ol>
+<li><p>在自有域名所属网站配置域名解析规则</p>
+<p> 例如在<strong>阿里云</strong>注册的域名，可以使用 cname 方式将自有域名映射为 GitHub Page 的域名</p>
+</li>
+<li><p>在 GitHub 配置使用自有域名访问 GitHub Page</p>
+<p> Repository 的 setting 页面，在 custom domain 中设置自有域名，并且去除勾选 Force Https 选项。因为阿里云的域名如果只支持 http 协议的话，则会使用 <a href="http://zjw.github.io" target="_blank" rel="noopener">http://zjw.github.io</a> 访问网站，而不是 <a href="https://zjw.github.io" target="_blank" rel="noopener">https://zjw.github.io</a></p>
+</li>
+<li><p><strong>避免自有域名的配置在 hexo deploy 命令后被修改</strong></p>
+<p> 在 Hexo 项目的 source 目录中创建文件 CNAME，文件的内容只需要添加自有域名即可</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/blog/2020/05/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo 配置文件</title>
+    <url>/blog/2020/05/21/hexo_config/</url>
+    <content><![CDATA[<p>简介</p>
+<a id="more"></a>
+
+<h2 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h2><h3 id="post-asset-folder"><a href="#post-asset-folder" class="headerlink" title="post_asset_folder"></a>post_asset_folder</h3><pre><code>value: true, false</code></pre><p>是否在使用 <code>hexo new</code> 创建文章时创建同名的文件夹，该文件夹用来保存对应的文章中使用的资源，如图片等。值为 <code>true</code> 时表示创建</p>
+<h2 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h2><pre><code>Search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000</code></pre><p>使 hexo 支持搜索功能<br>Layout folder. This folder contains the theme’s template files, which define the appearance of your website.</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next 主题入门</title>
+    <url>/blog/2020/05/21/hexo_next_basic/</url>
+    <content><![CDATA[<p>简介</p>
+<a id="more"></a>
+
+<h2 id="安装-Next-主题"><a href="#安装-Next-主题" class="headerlink" title="安装 Next 主题"></a>安装 Next 主题</h2><h2 id="文章分类和标签"><a href="#文章分类和标签" class="headerlink" title="文章分类和标签"></a>文章分类和标签</h2><h3 id="在文章中添加分类和标签信息"><a href="#在文章中添加分类和标签信息" class="headerlink" title="在文章中添加分类和标签信息"></a>在文章中添加分类和标签信息</h3><pre><code>title: &lt;文章标题&gt;
+categories: [父类, 子类]
+tags: [标签1, 标签2]</code></pre><p>或者</p>
+<pre><code>title: &lt;文章标题&gt;
+categories: 
+-   父类
+-   子类
+tags:
+-   标签1
+-   标签2</code></pre><p>分类按照顺序有层级关系，标签的顺序随意</p>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><pre><code>menu:
+    tags: /tags/ || fa fa-tags
+    categories: /categories/ || fa fa-th</code></pre><h3 id="创建显示分类信息的页面"><a href="#创建显示分类信息的页面" class="headerlink" title="创建显示分类信息的页面"></a>创建显示分类信息的页面</h3><pre><code>$ hexo new page categories</code></pre><p>categories 页面的内容</p>
+<pre><code>---
+title: 分类
+date: 2020-05-21 20:52:51
+type: &quot;categories&quot;
+---</code></pre><h3 id="创建显示标签信息的页面"><a href="#创建显示标签信息的页面" class="headerlink" title="创建显示标签信息的页面"></a>创建显示标签信息的页面</h3><pre><code>$ hexo new page tags</code></pre><p>tags 页面的内容</p>
+<pre><code>---
+title: 标签
+date: 2020-05-21 20:52:51
+type: &quot;tags&quot;
+---</code></pre><h2 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h2><h3 id="修改默认字体"><a href="#修改默认字体" class="headerlink" title="修改默认字体"></a>修改默认字体</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
+<li>进入文件 themes/next/source/css/_variables/base.styl</li>
+<li>找到 $font-size-base，修改字体大小从 1em 到 0.8em</li>
+</ol>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
+<li><p>进入主题配置文件 themes/next/_config.yml</p>
+</li>
+<li><p>找到 font 配置项，修改下列配置项</p>
+<pre><code>enable: true
+global:
+    size: 0.8em</code></pre></li>
+</ol>
+<h2 id="主页中显示文章的简介"><a href="#主页中显示文章的简介" class="headerlink" title="主页中显示文章的简介"></a>主页中显示文章的简介</h2><h3 id="方法一-1"><a href="#方法一-1" class="headerlink" title="方法一"></a>方法一</h3><ol>
+<li><p>进入主题配置文件 themes/next/_config.yml</p>
+</li>
+<li><p>添加配置项</p>
+<p> auto_excerpt:</p>
+<pre><code>enable: true
+length: 150</code></pre></li>
+</ol>
+<h3 id="方法二-1"><a href="#方法二-1" class="headerlink" title="方法二"></a>方法二</h3><p>在文章中需要在主页中显示的部分下面加上</p>
+<pre><code>&lt;!--more--&gt;</code></pre>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>主题</category>
+      </categories>
+      <tags>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux 入门</title>
+    <url>/blog/2020/05/24/linux-basic/</url>
+    <content><![CDATA[<p>简介</p>
+<a id="more"></a>
+
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p>创建目录</p>
+<pre><code>参数：
+    -p: 递归创建目录，如果父级目录不存在则创建路径中缺失的全部目录</code></pre>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>markdown 入门</title>
+    <url>/blog/2020/05/26/markdown_basic/</url>
+    <content><![CDATA[<p>markdown 简介</p>
+<a id="more"></a>
+
+<h2 id="粗体和斜体"><a href="#粗体和斜体" class="headerlink" title="粗体和斜体"></a>粗体和斜体</h2><ol>
+<li>使用一对 ** 包含文字，使其显示为粗体，例如 <strong>粗体</strong></li>
+<li>使用一对 _ 包含文字，使其显示为斜体，例如 <em>斜体</em></li>
+</ol>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ol>
+<li>共有 6 种尺寸的标题</li>
+<li>在不同尺寸的标题前使用对应数目的 #，使其显示为对应的标题</li>
+<li>标题不能使用粗体样式，但可以使用斜体样式</li>
+<li>通常一号标题和六号标题用的少</li>
+</ol>
+<h1 id="一号标题"><a href="#一号标题" class="headerlink" title="一号标题"></a>一号标题</h1><h2 id="二号标题"><a href="#二号标题" class="headerlink" title="二号标题"></a>二号标题</h2><h3 id="三号标题"><a href="#三号标题" class="headerlink" title="三号标题"></a>三号标题</h3><h4 id="四号标题"><a href="#四号标题" class="headerlink" title="四号标题"></a>四号标题</h4><h5 id="五号标题"><a href="#五号标题" class="headerlink" title="五号标题"></a>五号标题</h5><h6 id="六号标题"><a href="#六号标题" class="headerlink" title="六号标题"></a><em>六号标题</em></h6><h2 id="链接方式一"><a href="#链接方式一" class="headerlink" title="链接方式一"></a>链接方式一</h2><ol>
+<li>使用一对 [] 包含说明文字，使用一对 () 包含链接地址，例如 <a href="https://zjwlinux.github.io" target="_blank" rel="noopener">我的博客</a></li>
+<li>可以在标题中使用链接<h4 id="标题中使用链接"><a href="#标题中使用链接" class="headerlink" title="标题中使用链接"></a>标题中使用<a href="https://zjwlinux.github.io" target="_blank" rel="noopener">链接</a></h4></li>
+</ol>
+<h2 id="链接方式二"><a href="#链接方式二" class="headerlink" title="链接方式二"></a>链接方式二</h2><ol>
+<li>在链接地址位置使用一对 [] 包含引用名称</li>
+<li>在 markdown 文档的底部写出引用对应的网址</li>
+<li>好处是当 markdown 文档中包含多个相同网址的引用时，可以只修改一次</li>
+</ol>
+<p><a href="https://zjwlinux.github.io" target="_blank" rel="noopener">我的博客</a></p>
+<h2 id="图片方式一"><a href="#图片方式一" class="headerlink" title="图片方式一"></a>图片方式一</h2><ol>
+<li>与链接方式一相比，只是在前面添加一个 !</li>
+</ol>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg" alt="我的图片"></p>
+<h2 id="图片方式二"><a href="#图片方式二" class="headerlink" title="图片方式二"></a>图片方式二</h2><ol>
+<li>与链接方式二相比，只是在前面添加一个 !</li>
+</ol>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg" alt="我的图片"></p>
+<h2 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h2><ol>
+<li>使用 &gt; 将一段文字设置为引用</li>
+<li>当被引用的文字包含多段时，在每一行的开头加上 &gt;，即使空白行，这样保证全部 &gt; 被识别为一组<blockquote>
+<p>这是关于块引用的说明</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ol>
+<li>在每个列表项前面加上 *</li>
+<li>子列表中，每个列表项前面的 * 比上一级列表项缩进一个 tab 字符</li>
+</ol>
+<ul>
+<li>星期一<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</li>
+<li>星期二</li>
+<li>星期三</li>
+</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
+<li><p>在每个列表项前面加上数字，如 1</p>
+</li>
+<li><p>为列表项添加自己的段落</p>
+<blockquote>
+<ol>
+<li>列表项下面空一行</li>
+<li>空至少一个后开始写段落的内容</li>
+</ol>
+</blockquote>
+<ol>
+<li>星期一</li>
+<li>星期二</li>
+<li>星期三</li>
+</ol>
+</li>
+</ol>
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><ol>
+<li>当一个段落有多行时，如果直接换行，那么 markdown 会把这两行作为一行处理。如果在两行中加入一个空行，那么这就是一个硬分行。要实现分行又不加入空行，这需要在没行的末尾加入 2 个空白字符</li>
+</ol>
+<p>这是一个段落的第一行<br>这是一个段落的第二行</p>
+<p>代码</p>
+<ol>
+<li><p>在一行开始的时候空 4 格或一个 tab </p>
+</li>
+<li><p>在列表中，需要空 8 格或两个 tab</p>
+<pre><code>public static void main(String[] args) {
+
+}</code></pre></li>
+</ol>
+<h1 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h1><h2 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h2><p>这是一段代码 <code>integer age = 41;</code>，可以看到已经成功了</p>
+<hr>
+<p># 标题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input checked="" disabled="" type="checkbox"> one</li>
+<li>[] two</li>
+<li>[] three</li>
+</ul>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>网页</tag>
+        <tag>编辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 入门</title>
+    <url>/blog/2020/05/20/hexo_basic/</url>
+    <content><![CDATA[<pre><code>安装 Hexo
+支持部署网站到远程 git 仓库
+支持文章搜索</code></pre><a id="more"></a>
+
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>使用 Markdown 来创建页面的内容，Hexo 自动将 Markdown 文件转换为静态的网页，并且使用漂亮的主题来对网页进行装饰</p>
+<h2 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h2><h3 id="安装-git-和-node-js"><a href="#安装-git-和-node-js" class="headerlink" title="安装 git 和 node.js"></a>安装 git 和 node.js</h3><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><pre><code>$ npm install -g hexo-cli</code></pre><h3 id="安装-Hexo-Server"><a href="#安装-Hexo-Server" class="headerlink" title="安装 Hexo Server"></a>安装 Hexo Server</h3><pre><code>$ npm install hexo-server --save</code></pre><p>hexo server 启动后，会自动监控项目的变化，并更新，从而修改项目后不需要重新启动 server。启动 hexo server 的方法是</p>
+<pre><code>$ hexo server</code></pre><p>hexo server 默认的端口是 4000</p>
+<p>hexo server 可以启动多个实例，只需要制定不同的端口即可</p>
+<pre><code>$ hexo server -p 5000</code></pre><h3 id="初始化-Hexo-项目"><a href="#初始化-Hexo-项目" class="headerlink" title="初始化 Hexo 项目"></a>初始化 Hexo 项目</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>初始化完成后，项目文件夹中至少包含下列内容</p>
+<ul>
+<li>_config.yml   // Hexo 的配置文件</li>
+<li>package.json</li>
+<li>scaffolds</li>
+<li>sources<ul>
+<li>_drafts   // 草稿，默认不显示</li>
+<li>_posts    // 网页内容</li>
+</ul>
+</li>
+<li>themes</li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="指定自定义配置文件"><a href="#指定自定义配置文件" class="headerlink" title="指定自定义配置文件"></a>指定自定义配置文件</h4><p>自定义的配置文件会替换默认的 _config.yml。多个自定义配置文件中，如果有相同的配置，后面的会替换前面的。多个自定义配置文件会被保存到一个新的配置文件中 _multiconfig.yml</p>
+<pre><code>$ hexo server --config &lt;custom.yml&gt;
+$ hexo server --config &lt;custom.json&gt;
+$ hexo server --config &lt;custom.yml&gt;, &lt;custom.json&gt;</code></pre><h4 id="主题配置文件"><a href="#主题配置文件" class="headerlink" title="主题配置文件"></a>主题配置文件</h4><ul>
+<li>主题有自己的配置文件 _config.yml</li>
+<li>对 theme 配置也可以放到 Hexo 的配置文件 _config.yml 中</li>
+</ul>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><pre><code>$ hexo init [folder]</code></pre><p>初始化网站，如果没有指定文件夹，那么对当前的文件进行初始化</p>
+<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><pre><code>$ hexo new [layout] &lt;title&gt;</code></pre><p>创建一个新文章</p>
+<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><pre><code>$ hexo generate</code></pre><p>生成静态文件</p>
+<h4 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h4><pre><code>$ hexo publish [layout] &lt;filename&gt;</code></pre><p>发布草稿文章</p>
+<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><pre><code>$ hexo server</code></pre><p>启动一个本地服务器</p>
+<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><pre><code>$ hexo deploy</code></pre><p>部署网站</p>
+<h4 id="render"><a href="#render" class="headerlink" title="render"></a>render</h4><pre><code>$ hexo render
+
+option:
+    -o, --output 输出路径</code></pre><p>编译文章</p>
+<h4 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h4><pre><code>$ hexo migrate &lt;type&gt;</code></pre><p>从其他博客系统整合内容</p>
+<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><pre><code>$ hexo clean</code></pre><p>清除缓存文件（db.json）和生成的文件（public）</p>
+<h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><pre><code>$ hexo list &lt;type&gt;
+
+type:
+    page, post, tag, route or category</code></pre><p>列出网站的信息</p>
+<h4 id="version"><a href="#version" class="headerlink" title="version"></a>version</h4><pre><code>$ hexo version</code></pre><p>显示 hexo 的版本信息</p>
+<h2 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h2><h3 id="支持部署网站到远程-git-仓库"><a href="#支持部署网站到远程-git-仓库" class="headerlink" title="支持部署网站到远程 git 仓库"></a>支持部署网站到远程 git 仓库</h3><ol>
+<li><p>安装插件 </p>
+<pre><code>$ npm install hexo-deployer-git --save</code></pre></li>
+<li><p>修改站点的配置文件 _config.yml，修改 deploy 配置</p>
+<pre><code>deploy: 
+    type: git
+    repo: git@gitee.com:zjwlinux/zjwlinux.gitee.io.git
+    branch: master</code></pre></li>
+<li><p>运行部署指令</p>
+<pre><code>$ hexo deploy
+
+参数:
+    -m: 指定部署网站是的描述信息</code></pre></li>
+</ol>
+<h3 id="增加搜索功能"><a href="#增加搜索功能" class="headerlink" title="增加搜索功能"></a>增加搜索功能</h3><ol>
+<li><p>安装插件</p>
+<pre><code>$ npm install hexo-generator-searchdb --save</code></pre></li>
+<li><p>修改站点的配置文件 _config.yml，增加 <code>search</code> 配置，见 <code>hexo_config</code> 文章</p>
+<pre><code>search:
+    path: search.xml
+    field: post
+    format: html
+    limit: 10000</code></pre></li>
+<li><p>修改主题的配置文件 _config.yml</p>
+<pre><code>local_search:
+    enable: true</code></pre></li>
+</ol>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node.js 入门</title>
+    <url>/blog/2020/05/25/nodejs_basic/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h2 id="Node-js-安装"><a href="#Node-js-安装" class="headerlink" title="Node.js 安装"></a>Node.js 安装</h2><ol>
+<li><p>从官网下载安装包：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
+</li>
+<li><p>安装时会安装 node.js 和 npm（包管理工具）</p>
+<pre><code>Mac: 
+    Node.js v12.16.3 to /usr/local/bin/node
+    npm v6.14.4 to /usr/local/bin/npm</code></pre></li>
+<li><p>升级 node.js</p>
+<p> 查看本机当前Node.js和npm版本</p>
+<pre><code>$ node -v
+$ npm -v</code></pre><p> 清除node.js的cache</p>
+<pre><code>$ sudo npm cache clean -f</code></pre><p> 安装”n”版本管理工具，管理node.js</p>
+<pre><code>$ sudo npm install -g n</code></pre><p> 更新node.js版本</p>
+<pre><code>$ sudo n stable</code></pre><p> 更新npm版本</p>
+<pre><code>sudo npm install npm@latest -g</code></pre></li>
+</ol>
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><p>查看当前已安装插件</p>
+<pre><code>$ npm list</code></pre><p>更新全部插件 </p>
+<pre><code>$ npm update [--save-dev]</code></pre><p>更新特定插件</p>
+<pre><code>$ npm update &lt;name&gt; [-g] [--save-dev]</code></pre><p>卸载特定插件</p>
+<pre><code>$ npm uninstall &lt;name&gt; [-g] [--save-dev]</code></pre><h3 id="加快-npm-安装速度"><a href="#加快-npm-安装速度" class="headerlink" title="加快 npm 安装速度"></a>加快 npm 安装速度</h3><h4 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h4><p>安装 cnpm </p>
+<pre><code>$ npm install cnpm -g --registry=https://registry.npm.taobao.org</code></pre><p>测试 cnpm 是否安装成功</p>
+<pre><code>$ cnpm -v</code></pre><h4 id="使用国内镜像插件库"><a href="#使用国内镜像插件库" class="headerlink" title="使用国内镜像插件库"></a>使用国内镜像插件库</h4><p>npm 的默认插件库是 <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a></p>
+<p>查看当前使用的 npm 插件库</p>
+<pre><code>$ npm config get registry</code></pre><p>替换使用国内的 npm 插件库</p>
+<pre><code>$ npm config set registry https://registry.npm.taobao.org</code></pre>]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UDP</title>
+    <url>/blog/2020/05/22/net_udp/</url>
+    <content><![CDATA[<p>简介</p>
+<a id="more"></a>
+
+<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>UDP(User Datagram Protocol) 指用户数据包协议。特点是传输比 TCP 速度快，但是出错的可能性大，主要用于对数据准确性要求不高的视频、音频的传输。</p>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>UDP 数据包由首部和数据组成<br>首部有 8 个字节，分成 4 个字段</p>
+<ul>
+<li>源端口号</li>
+<li>目标端口号</li>
+<li>长度</li>
+<li>校验和</li>
+</ul>
+<p>长度定义了数据包的总长度，包括首部和数据</p>
+<p>校验和用来检验接收的数据包是否出错，校验和的计算使用了整个数据包的数据，包括首部和数据。</p>
+<h3 id="数据包大小"><a href="#数据包大小" class="headerlink" title="数据包大小"></a>数据包大小</h3><p>UDP 数据包的<strong>数据部分</strong>长度范围是 0~65507 字节。但是实际应用中，<strong>数据部分</strong>的长度通常不会这么大，这是受到底层传输协议的限制。  </p>
+<ol>
+<li>在链路层，由以太网的特性限制，一个数据帧的长度范围是 (46 + 18) 字节到 (1500 + 18) 字节，其中 18 指数据帧的头和尾的长度，因此数据部分最多只有 1500 字节，即 MTU(Maximum Transmission Unit) 为1500 字节。  </li>
+<li>在网络层，IP 数据包的头部需要 20 个字节，因此 MTU = 1500 - 20 = 1480 字节</li>
+<li>在传输层，UDP 数据包的头部需要 8 个字节，因此 MTU = 1480 - 8 = 1472 字节</li>
+</ol>
+<p>因此，在应用层，UDP 数据包的数据部分最大长度为 1472 字节，如果超出 1472 字节，在网络层就需要分片传输，即分成多个 IP 包传输。在接收方的网络层需要对多个 IP 分片进行重组，因为 UDP 是不可靠传输协议，因此如果分片丢失，则整个 UDP 数据包都会被丢弃。<br>但是 1472 字节只是在局域网内的最大值，互联网上各个路由器配置的不同，标准的 MTU 为 576，从而开发时 UDP 的数据部分的最大值最好控制在 548(576 - 20 - 8 = 548)字节以内。</p>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>UDP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ABAP 基础</title>
+    <url>/blog/2020/05/24/sap_abap_basic/</url>
+    <content><![CDATA[<p>简介</p>
+<a id="more"></a>
+
+
+]]></content>
+      <categories>
+        <category>SAP</category>
+        <category>ABAP</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Git 入门</title>
+    <url>/blog/2020/05/24/util-git/</url>
+    <content><![CDATA[<p>简介</p>
+<a id="more"></a>
+
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><p>初始化</p>
+<pre><code>参数：
+    --bare 创建裸仓库，即把隐藏目录 .git 下的内容全部直接置于仓库目录下</code></pre>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css 字体</title>
+    <url>/blog/2020/05/24/web_css_font/</url>
+    <content><![CDATA[<ol>
+<li>字体单位，包括 px，em，rem<a id="more"></a>
+
+</li>
+</ol>
+<h2 id="字体家族（font-family）"><a href="#字体家族（font-family）" class="headerlink" title="字体家族（font-family）"></a>字体家族（font-family）</h2><h2 id="字体尺寸（font-size）"><a href="#字体尺寸（font-size）" class="headerlink" title="字体尺寸（font-size）"></a>字体尺寸（font-size）</h2><h3 id="字体单位"><a href="#字体单位" class="headerlink" title="字体单位"></a>字体单位</h3><ol>
+<li><p>px</p>
+<p> 绝对单位  </p>
+<p> 早期 css 的 px 与物理像素是一致的，即 1个 px 对应一个物理像素<br> 后来由于该分辨率屏幕的出现，引入了设备像素比例的概念（设备像素比例 = 物理像素数/独立像素数），即 1 个独立像素使用多个物理像素表示，css 的 px 对应于独立像素。</p>
+</li>
+<li><p>em</p>
+<p> 相对单位</p>
+<p> 相对当前元素的字体的大小，例如当前字体大小是 10 px，则 1em 表示 10 px。</p>
+<p> 浏览器默认的字体大小是 16 px，因此 1em 默认表示 16 px。</p>
+<p> 子元素的字体大小相对与父元素字体大小的百分比，即如果父元素字体大小为 16 px，子元素的字体大小为 0.5 em，则子元素的字体大小等于 0.5 * 16 = 8 px。</p>
+</li>
+<li><p>rem</p>
+<p> 相对单位，永远相对与 html 元素的字体大小</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>网站</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+</search>
